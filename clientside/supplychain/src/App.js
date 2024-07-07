@@ -1,9 +1,9 @@
-import { useState}  from "react";
+import { useState } from "react";
 
 import './App.css';
 import Navbar from "./components/NavBar";
-import React, {Fragment} from 'react';
-import {BrowserRouter as Router, Route,Routes} from "react-router-dom"; 
+import React, { Fragment } from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Producer from "./components/producer";
 import Shipper from "./components/shipper";
 import Retailer from "./components/retailer";
@@ -18,65 +18,68 @@ function App() {
     const [UserRole, setUserRole] = useState();
     const [UserOrg, setUserOrg] = useState();
 
-    if(!User) {
-        return <Login setUser={setUser} setUserRole={setUserRole}  setUserOrg={setUserOrg} />
+    if (!User) {
+        return <Login setUser={setUser} setUserRole={setUserRole} setUserOrg={setUserOrg} />
     }
 
     return (
 
         <div>
             <div className="title-section">
-            Username: {User}  :  {UserOrg}
-                <button className="button" onClick={() => setUser('') }>Logout</button>
-                
-            </div>   
+                <div style={{ height: "1px", width: "80%" }}>
+                    Username: {User}  :  {UserOrg}
+                </div>
+                <div style={{ textAlign: "right", width: "20%" }}>
+                    <button className="button" onClick={() => setUser('')}>Logout</button>
+                </div>
+            </div>
             <Router>
                 <Fragment>
-                    <div className="app-home"> 
+                    <div className="app-home">
                         <div className="Navbar">
-                            <Navbar User={User}  UserRole={UserRole}  UserOrg={UserOrg}/>
+                            <Navbar User={User} UserRole={UserRole} UserOrg={UserOrg} />
                         </div>
                         <div className="content">
-                     
-                            { User === 'admin' && 
-                                <Routes>  
-                                    <Route path = "/Register" element={<Register User={User}  UserRole={UserRole}  UserOrg={UserOrg} />}>
+
+                            {User === 'admin' &&
+                                <Routes>
+                                    <Route path="/Register" element={<Register User={User} UserRole={UserRole} UserOrg={UserOrg} />}>
                                     </Route>
-                                </Routes>  
+                                </Routes>
                             }
-                            { (UserRole === 'producer'  || User === 'admin') && 
-                                <Routes>  
-                                    <Route path = "/Producer" element={<Producer User={User}  UserRole={UserRole}  UserOrg={UserOrg} />}>
+                            {(UserRole === 'producer' || User === 'admin') &&
+                                <Routes>
+                                    <Route path="/Producer" element={<Producer User={User} UserRole={UserRole} UserOrg={UserOrg} />}>
                                     </Route>
-                                </Routes>  
+                                </Routes>
                             }
-                            { (UserRole === 'shipper' || User === 'admin') && 
-                                <Routes>  
-                                    <Route path = "/Shipper" element={<Shipper User={User}  UserRole={UserRole}  UserOrg={UserOrg}/>}>
+                            {(UserRole === 'shipper' || User === 'admin') &&
+                                <Routes>
+                                    <Route path="/Shipper" element={<Shipper User={User} UserRole={UserRole} UserOrg={UserOrg} />}>
                                     </Route>
-                                </Routes>  
+                                </Routes>
                             }
 
-                            { (UserRole === 'retailer' || User === 'admin') && 
-                                <Routes>  
-                                    <Route path = "/Retailer" element={<Retailer User={User}  UserRole={UserRole}  UserOrg={UserOrg}/>}>
+                            {(UserRole === 'retailer' || User === 'admin') &&
+                                <Routes>
+                                    <Route path="/Retailer" element={<Retailer User={User} UserRole={UserRole} UserOrg={UserOrg} />}>
                                     </Route>
-                                </Routes>  
+                                </Routes>
                             }
-                            { (UserRole === 'regulator' || User === 'admin') && 
-                                <Routes>                          
-                                    <Route path = "/Regulator" element={<Regulator User={User}  UserRole={UserRole}  UserOrg={UserOrg}/>}>
+                            {(UserRole === 'regulator' || User === 'admin') &&
+                                <Routes>
+                                    <Route path="/Regulator" element={<Regulator User={User} UserRole={UserRole} UserOrg={UserOrg} />}>
                                     </Route>
-                                </Routes>  
+                                </Routes>
                             }
-                            { (UserRole ===   'customer' || User === 'admin') && 
-                                <Routes>                            
-                                    <Route path = "/Customer" element={<Customer User={User}  UserRole={UserRole}  UserOrg={UserOrg} />}>
+                            {(UserRole === 'customer' || User === 'admin') &&
+                                <Routes>
+                                    <Route path="/Customer" element={<Customer User={User} UserRole={UserRole} UserOrg={UserOrg} />}>
                                     </Route>
-                                </Routes>  
+                                </Routes>
                             }
-                        </div>  
-                    </div> 
+                        </div>
+                    </div>
                 </Fragment>
             </Router>
         </div>

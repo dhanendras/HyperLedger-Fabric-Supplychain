@@ -50,7 +50,7 @@ function Login({ setUser, setUserRole, setUserOrg }) {
                 </Spinner>
             }
             <div className="login-form">
-                <div className="title">Sign In</div>
+                <div className="title">Welcome User</div>
 
                 <div className="form">
                     <form onSubmit={handleLogin}>

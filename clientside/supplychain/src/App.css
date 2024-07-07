@@ -8,70 +8,85 @@
   float: center;
   height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: black;
+  background-color: wheat;
 }
+
 .Loader {
   position: fixed;
   left: 0px;
   top: 0px;
-  color:silver;
+  color: silver;
   width: 100%;
   height: 100%;
   z-index: 9999;
 }
-.page{
-  background-color: black;
+
+.page {
+  background-color: wheat;
 }
-.title-section{
-  background-color: black;
+
+.title-section {
+  background-color: firebrick;
   align-items: right;
-  justify-content: right;
   padding-left: 10px;
-  color:silver;
+  color: silver;
+  text-align: center;
+  padding-bottom: 30px;
+  padding-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.button{
+
+.button {
   padding: 4px;
   margin-right: 50px;
   margin-top: 25px;
   margin-left: 10px;
 }
-.Navbar{
+
+.Navbar {
   float: left;
   width: 10%;
-  background-color: rgb(10, 10, 10);
+  background-color: aliceblue;
   padding: 10px;
-  border-color: black;
+  border-color: aliceblue;
   border-style: solid;
   border-width: 5px;
-  height: 600px;
+  /* height: 600px; */
 }
+
 .app-home {
   font-family: sans-serif;
   gap: 20px;
   height: 100vh;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-color: black;
+  background-color: wheat;
+  display: flex;
+
 }
 
-.order-list{
+.order-list {
   border-color: silver;
   border-style: solid;
-  color: silver;
+  /* color: silver; */
   border-width: 1px;
   padding-top: 5px;
   margin-left: 10px;
 }
 
-.content{
-  background-color: rgb(10, 10, 10);
+.content {
+  background-color: wheat;
   float: left;
   width: 80%;
-  border-color: black;
+  border-color: wheat;
   border-style: solid;
   border-width: 5px;
   padding: 10px;
   height: 600px;
+  padding-left: 20%;
 }
+
 input[type="text"],
 input[type="password"] {
   height: 25px;
@@ -85,15 +100,16 @@ input[type="submit"] {
   background: #0baf79;
   color: #fff;
   padding: 10px 20px;
+  margin-left: 63px;
 }
 
 input[type="submit"]:hover {
   background: #6cf0c2;
 }
 
-.links{
-  text-Decoration:"none";
-  width:100%;
+.links {
+  text-Decoration: "none";
+  width: 100%;
   margin-left: 5%;
   justify-content: center;
   padding: 10px 10px;
@@ -105,9 +121,9 @@ input[type="submit"]:hover {
 }
 
 .login-form {
-  background-color: black;
+  background-color: firebrick;
   padding: 2rem;
-  width: 20%;
+  width: 30%;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -124,12 +140,13 @@ input[type="submit"]:hover {
 .title {
   font-size: 25px;
   margin-bottom: 20px;
-  color:silver;
+  color: silver;
+  text-align: center;
 }
 
 .input-container {
   display: flex;
-  color:silver;
+  color: silver;
   flex-direction: column;
   gap: 8px;
   margin: 10px;
@@ -140,12 +157,14 @@ input[type="submit"]:hover {
   flex-direction: column;
   width: 200px;
   gap: 8px;
-  color:silver;
+  /* color: silver; */
   margin: 10px;
 }
-.input-box{
-  background-color:silver;
+
+.input-box {
+  background-color: silver;
 }
+
 .submit-button {
   margin-left: 10px;
   cursor: pointer;
